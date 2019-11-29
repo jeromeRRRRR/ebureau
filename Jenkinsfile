@@ -11,21 +11,21 @@ pipeline {
             steps {
                 // 
 				echo 'Etape compile'
-				bat 'mvn clean compile'
+				//bat 'mvn clean compile'
             }
         }
         stage('Test') { 
             steps {
                 //
 				echo 'Etape compile'
-				bat 'mvn clean test'
+				//bat 'mvn clean test'
             }
         }
         stage('Packaging') { 
             steps {
                 // 
 				echo 'Etape Packaging'
-				bat 'mvn clean package'
+				//bat 'mvn clean package'
             }
         }
 		stage('Deploy') { 
@@ -33,7 +33,8 @@ pipeline {
                 // 
 				echo 'Etape Deploy'
 				// bat 'copy /Y "C:/opt/Jenkins/workspace/ebureauPipeline/target/ebureau.war" "C:/Program Files/Apache Software Foundation/Tomcat 9.0/webapps/ebureau.war"'
-				bat 'copy /Y "C:\\opt\\Jenkins\\workspace\\ebureauPipeline\\target\\ebureau.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\webapps\\ebureau.war"'
+				//bat 'copy /Y "C:\\opt\\Jenkins\\workspace\\ebureauPipeline\\target\\ebureau.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\webapps\\ebureau.war"'
+				bat 'copy /Y "target\\ebureau.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\webapps\\ebureau.war"'
             }
         }
     }
