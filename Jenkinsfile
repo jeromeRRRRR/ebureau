@@ -11,6 +11,7 @@ pipeline {
             steps {
                 // 
 				echo 'Etape compile'
+				bat 'mvn clean compile'
             }
         }
         stage('Test') { 
