@@ -1,5 +1,10 @@
 pipeline {
-    agent any 
+    agent any
+
+	tools {
+		maven 'M3'
+	}
+	
     stages {
 	
         stage('Compile') { 
